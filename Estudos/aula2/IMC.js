@@ -1,0 +1,6 @@
+let peso = prompt("Qual o seu peso?")
+peso = parseFloat(peso)
+let altura = prompt("Qual a sua altura?")
+altura = parseFloat(altura)
+let imc = peso / (altura ** 2)
+alert(`Seu IMC é ${imc.toFixed(2)}`)
