@@ -15,7 +15,7 @@ switch(true){
     case nasc <= 2010:
         alert("Geração Z")
         break
-    case nasc >= 2011:
+    case nasc <= 2011:
         alert("Geração Alfa")
         break
     default:
