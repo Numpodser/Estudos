@@ -1,0 +1,21 @@
+h1{
+    color:rgb(119, 18, 18);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    color: rgb(119, 18, 18);
+}
+
+img{
+    width: 700px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    padding: 100px 300px;
+}
