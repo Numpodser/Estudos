@@ -1,15 +1,17 @@
-let num = parseInt(prompt("Digite um número para descobrir se ele é primo ou não"))
-let resul = 0
-conta = num
-while(resul >= 1){
-    conta--
-    resul = num % conta
-}
-console.log(num)
-console.log(conta)
-console.log(resul)
-if (resul == 0 ){
-    alert(`O número ${num} não é primo`)
-} else {
-    alert(`O número ${num} é primo`)
+let cont = 2
+let primo = true
+let rep = 0
+let num = 3
+while (cont < num  && rep < 5) {
+    num = Number(prompt("DIgite um número para saber se ele é primo"))
+    if (num % cont == 0) {
+        primo = false
+    }
+    cont++
+    if (primo == true) {
+        alert(`O número ${num} é primo`)
+    } else {
+        alert(`O número ${num} não é primo`)
+    }
+    rep ++
 }
