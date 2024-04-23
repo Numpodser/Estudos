@@ -14,4 +14,4 @@ while (cont < num  && rep < 5) {
         alert(`O número ${num} não é primo`)
     }
     rep ++
-}
+} 

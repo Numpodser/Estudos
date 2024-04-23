@@ -1,11 +1,19 @@
 let nomeMusic = ''
 let temp = 0
 let minMusic = 0
-while (nomeMusic != 'terminar') {
+let tempFinal = 0
+let horas = 0
+let minutos
+while (nomeMusic != 'encerrar') {
     nomeMusic = prompt('Qual o nome da música?')
-    if (nomeMusic != 'terminar') {
+    if (nomeMusic != 'encerrar') {
         minMusic = prompt('Quantos minutos tem a música')
         temp += minMusic
     }
 }
-alert(`O tempo total de reprodução é de ${temp.toFixed(2)} horas`)
+while(temp >= 60){
+    temp -= 60
+    horas ++
+}
+minutos = temp
+alert(`${horas}:${minutos}`)
