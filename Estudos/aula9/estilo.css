@@ -1,4 +1,10 @@
 img{
-    width: 100px;
+    width: 200px;
     padding-left: 500px;
+}
+body{
+    background-image:url(fundoDaPag.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
