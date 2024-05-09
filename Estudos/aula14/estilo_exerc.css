@@ -1,0 +1,27 @@
+header{
+    background: linear-gradient(rgba(167,76,15,1) 39%, rgba(218,97,97,1) 100%);
+    padding: auto;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.uepa{
+    color: white;
+    text-align: center;
+    padding: auto;
+}
+h2{
+    color: orangered;
+    text-align: center;
+}
+img{
+    width: 600px;
+}
+.imag{
+    text-align: center;
+}
+iframe{
+    width: 600px;
+    height: 400px;
+}

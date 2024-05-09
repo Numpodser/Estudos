@@ -1,0 +1,21 @@
+p{
+    color: purple;
+}
+.texto-verde{
+    color: green;
+}
+#texto-unico{
+    color: black;
+}
+.fora{
+    width: 400px;
+    height: 200px;
+    background-color: yellow;
+    padding: 30px;
+}
+.dentro{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    margin: 30px;
+}
