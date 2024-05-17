@@ -3,7 +3,6 @@ let resp = []
 for(let i = 2010; i < 2020; i++){
     ano.push(i)
 }
-
 alert('Digite "S" ou "N" para responder se houve ou não alistmento no ano')
 for(let cont = 0; cont < ano.length; cont++){
     let perg = prompt(`Ano de ${ano[cont]}:`)

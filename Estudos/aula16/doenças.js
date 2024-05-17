@@ -21,4 +21,4 @@ for(quant; quant > 0; quant--){
             alert('Opção invalida.')
     }
 }
-alert(`As doenças transmitidas por vírus são ${virus}\nAs doenças transmitidas por bactérias são ${bacterias}\nAs doenças transmitidas por ambos são ${ambos}\nA lista de todas as doenças é: ${doencas}`)
+alert(`As doenças transmitidas por vírus são ${virus.join(', ')}\nAs doenças transmitidas por bactérias são ${bacterias.join(', ')}\nAs doenças transmitidas por ambos são ${ambos.join(', ')}\nA lista de todas as doenças é: ${doencas.join(', ')}`)
