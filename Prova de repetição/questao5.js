@@ -14,8 +14,9 @@ for(let i = 0; i < 5; i++){
             i -= 2
             alert(fila)
             break
-        default:
-            alert('Opção invalida')
+            default:
+                alert('Opção invalida')
+                i -= 1
             break
     }
 }
