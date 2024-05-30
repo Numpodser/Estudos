@@ -1,0 +1,17 @@
+#what{
+    width: 55px;
+    position: fixed;
+    bottom: 0;
+}
+#chat{
+    width: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 90%;
+}
+header{
+    background-color: darkblue;
+}
+span{
+    padding-left: 60px;
+}
