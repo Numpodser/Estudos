@@ -1,0 +1,14 @@
+#logo{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+}
+
+
+
+a{
+    text-decoration: none;
+}
