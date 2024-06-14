@@ -1,0 +1,30 @@
+.principal{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(216, 211, 203);
+}
+
+.principal:hover{
+    background-color: aliceblue;
+}
+
+.principal:active{
+    background-color: aqua;
+}
+
+.texto{
+    color: red;
+}
+
+.texto:focus{
+    color: rgb(223, 34, 223);
+}
+
+a:visited{
+    text-decoration: none;
+    color: cyan;
+}
+
+.btn-enviar{
+    color: red;
+}
