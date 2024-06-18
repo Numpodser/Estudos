@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="string.js" defer></script>
+</head>
+<body>
+    <button onclick="buscarNome()">Buscar Nome</button>
+
+    <form onsubmit="mostrarNome(event)">
+        <label for="id_nome">Nome</label>
+        <input type="text" id="id_nome" name="nome">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensagem"></p>
+</body>
+</html>

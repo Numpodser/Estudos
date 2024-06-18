@@ -1,4 +1,4 @@
 function abrirEfechar(){
     const div = document.querySelector('.pag')
-    div.classList.toggle("oculto")
+    div.classList.remove("oculto")
 }
