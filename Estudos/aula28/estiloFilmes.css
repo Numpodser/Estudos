@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+header {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#Formo {
+    text-align: center;
+    background-color: rgb(98, 98, 98);
+}
