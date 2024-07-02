@@ -1,56 +1,64 @@
-let titulos = []
-let autores = []
-let datas = []
-let generos = []
-let duracoes = []
-let capas = []
-let sipnoses = []
+let filmes = []
+let adicionado = []
+const f = document.getElementById('antesSalvar')
 
 function AddFilme(evento) {
     evento.preventDefault()
-
     const title = document.getElementById('titulo').value
     const autor = document.getElementById('autor').value
     const data = document.getElementById('data').value
     const gen = document.getElementById('genero').value
     const duracao = document.getElementById('duracao').value
-    const capa = document.getElementById('capa')
+    const capa = document.getElementById('capa').value
     const sip = document.getElementById('sipnose').value
 
-    const tituloFil = document.getElementById('tituloFilme')
-    const autorFil = document.getElementById('autorFilme')
-    const dataFil = document.getElementById('dataFilme')
-    const generoFil = document.getElementById('generoFilme')
-    const duracaoFil = document.getElementById('duracaoFilme')
-    const capaFil = document.getElementById('capaDoFilme')
-    const sipnoseFil = document.getElementById('sipnoseFilme')
-
-    tituloFil.innerHTML = title
-    autorFil.innerHTML = autor
-    dataFil.innerHTML = data
-    generoFil.innerHTML = gen
-    duracaoFil.innerHTML = duracao
-    sipnoseFil.innerHTML = sip
-    capaFil.setAttribute('src', capa.value)
-    
-    titulos.push(title)
-    autores.push(autor) 
-    datas.push(data)
-    generos.push(gen)
-    duracoes.push(duracao)
-    capas.push(capa.value)
-    sipnoses.push(sip )
-    
-    console.log(titulos);
-    console.log(autores);
-    console.log(datas);
-    console.log(generos);
-    console.log(duracoes);
-    console.log(capas);
-    console.log(sipnoses);
+    f.innerHTML +=
+        `<img src="${capa}">
+        <h3>${title}</h3>
+        <p>${autor}</p>
+        <p>${data}</p>
+        <p>${gen}</p>
+        <p>${duracao}</p>
+        <p>${sip}</p>
+        <button onclick="salvar(event)">Salvar</button>
+        `
 }
 
 function salvar() {
 
-    
+    const titles = document.getElementById('titulo').value
+    const autors = document.getElementById('autor').value
+    const datas = document.getElementById('data').value
+    const gens = document.getElementById('genero').value
+    const duracaos = document.getElementById('duracao').value
+    const capas = document.getElementById('capa').value
+    const sips = document.getElementById('sipnose').value
+
+    adicionado.push(capas, titles, autors, datas, gens, duracaos,  sips)
+    filmes.push(adicionado)
+
+    localStorage.setItem('filmes', JSON.stringify(filmes))
+
+}
+
+const dados = localStorage.getItem('filmes')
+
+if (dados) {
+    filmes = JSON.parse(dados)
+}
+
+f.innerHTML = ''
+
+for (let i = 0; i < filmes.length; i++) {
+
+    f.innerHTML +=
+        `<img src="${filmes[i][0]}">
+        <h3>${filmes[i][1]}</h3>
+        <p>${filmes[i][2]}</p>
+        <p>${filmes[i][3]}</p>
+        <p>${filmes[i][4]}</p>
+        <p>${filmes[i][5]}</p>
+        <p>${filmes[i][6]}</p>
+        <button onclick="excluir(${i})">Excluir</button>
+        `
 }
