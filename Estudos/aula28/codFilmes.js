@@ -1,6 +1,7 @@
 let filmes = []
 let adicionado = []
 const f = document.getElementById('antesSalvar')
+const s = document.getElementById('deposiSalvar')
 
 function AddFilme(evento) {
     evento.preventDefault()
@@ -12,7 +13,7 @@ function AddFilme(evento) {
     const capa = document.getElementById('capa').value
     const sip = document.getElementById('sipnose').value
 
-    f.innerHTML +=
+    f.innerHTML =
         `<img src="${capa}">
         <h3>${title}</h3>
         <p>${autor}</p>
@@ -20,7 +21,7 @@ function AddFilme(evento) {
         <p>${gen}</p>
         <p>${duracao}</p>
         <p>${sip}</p>
-        <button onclick="salvar(event)">Salvar</button>
+        <button class='bota' onclick="salvar(event)">Salvar</button>
         `
 }
 
@@ -34,7 +35,7 @@ function salvar() {
     const capas = document.getElementById('capa').value
     const sips = document.getElementById('sipnose').value
 
-    adicionado.push(capas, titles, autors, datas, gens, duracaos,  sips)
+    adicionado.push(capas, titles, autors, datas, gens, duracaos, sips)
     filmes.push(adicionado)
 
     localStorage.setItem('filmes', JSON.stringify(filmes))
@@ -47,18 +48,39 @@ if (dados) {
     filmes = JSON.parse(dados)
 }
 
-f.innerHTML = ''
+s.innerHTML = ''
 
 for (let i = 0; i < filmes.length; i++) {
 
-    f.innerHTML +=
+    s.innerHTML +=
         `<img src="${filmes[i][0]}">
-        <h3>${filmes[i][1]}</h3>
+        <h2>${filmes[i][1]}</h2>
         <p>${filmes[i][2]}</p>
         <p>${filmes[i][3]}</p>
         <p>${filmes[i][4]}</p>
         <p>${filmes[i][5]}</p>
         <p>${filmes[i][6]}</p>
-        <button onclick="excluir(${i})">Excluir</button>
+        <button onclick="excluir(${i})" class='bota'>Excluir</button>
         `
+}
+function excluir(cont) {
+    filmes.splice(cont, 1)
+
+    localStorage.setItem('filmes', JSON.stringify(filmes))
+
+    s.innerHTML = ''
+
+    for (let i = 0; i < filmes.length; i++) {
+
+        s.innerHTML +=
+            `<img src="${filmes[i][0]}">
+            <h3>${filmes[i][1]}</h3>
+            <p>${filmes[i][2]}</p>
+            <p>${filmes[i][3]}</p>
+            <p>${filmes[i][4]}</p>
+            <p>${filmes[i][5]}</p>
+            <p>${filmes[i][6]}</p>
+            <button onclick="excluir(${i})" class='bota'>Excluir</button>
+            `
+    }
 }
